@@ -35,13 +35,13 @@ Is very easy.
 - Gradle
 
 ```Java
-implementation 'io.github.adempiere:adempiere-business-processors:1.0.0'
+implementation 'io.github.adempiere:adempiere-pos-improvements:1.0.0'
 ```
 
 - SBT
 
 ```
-libraryDependencies += "io.github.adempiere" % "adempiere-business-processors" % "1.0.0"
+libraryDependencies += "io.github.adempiere" % "adempiere-pos-improvements" % "1.0.0"
 ```
 
 - Apache Maven
@@ -49,7 +49,7 @@ libraryDependencies += "io.github.adempiere" % "adempiere-business-processors" %
 ```
 <dependency>
     <groupId>io.github.adempiere</groupId>
-    <artifactId>adempiere-business-processors</artifactId>
+    <artifactId>adempiere-pos-improvements</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
