@@ -1,6 +1,7 @@
 # ADempiere Point Of Sales Improvements
 
 This project add many changes of dictionary for ADempiere, the main scope for this is create a setup very real and useful for POS.
+This was implemented for ADempiere Vue UI
 
 Note that all changes are added to POS definition.
 
