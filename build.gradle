@@ -47,7 +47,7 @@ signing {
 
 def entityType = 'D'
 version = "1.0.0"
-
+def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP")
 jar {
     manifest {
         attributes("Implementation-Title": "Adempiere Template Management",
@@ -68,7 +68,7 @@ publishing {
     }
     publications {
         mavenJava(MavenPublication) {
-        	groupId 'io.github.adempiere'
+        	groupId customGroupId
             artifactId 'adempiere-pos-improvements'
             version
            	from components.java
