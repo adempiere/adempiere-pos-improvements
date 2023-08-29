@@ -46,7 +46,7 @@ signing {
 }
 
 def entityType = 'D'
-version = "1.0.0"
+version = System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
 def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP")
 jar {
     manifest {
