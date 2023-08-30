@@ -120,6 +120,9 @@ public class TicketHandler {
 		if(className == null
 				|| className.trim().length() == 0) {
 			log.fine("Get from GenericTicketHandlerClass");
+			IPrintTicket ticketHandler = new GenericPrintTicket();
+			ticketHandler.setHandler(this);
+			return ticketHandler;
 		}
 		//	Handler
 		IPrintTicket ticketHandler = null;
