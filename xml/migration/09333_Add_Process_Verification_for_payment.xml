@@ -182,7 +182,7 @@
         <Data AD_Column_ID="2815" Column="AD_Client_ID">0</Data>
       </PO>
     </Step>
-    <Step 60="80" StepType="AD">
+    <Step SeqNo="80" StepType="AD">
       <PO AD_Table_ID="286" Action="I" Record_ID="0" Table="AD_Process_Para_Trl">
         <Data AD_Column_ID="84386" Column="UUID">5deb9041-1517-4df9-a382-796c99123dcc</Data>
         <Data AD_Column_ID="2839" Column="UpdatedBy">100</Data>
