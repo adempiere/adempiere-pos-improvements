@@ -1,119 +1,154 @@
-apply plugin: 'java-library'
-apply plugin: 'maven-publish'
-apply plugin: 'signing'
-sourceCompatibility = 1.11
+plugins {
+	id 'java-library'
+	id 'maven-publish'
+	id 'signing'
+	id "io.github.uoxx3.project-environment" version "1.0.1"
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+
 def baseVersion = '3.9.4'
 def baseGroupId = 'io.github.adempiere'
 
 repositories {
-    mavenLocal()
-    mavenCentral()
+	mavenLocal()
+	mavenCentral()
+	maven {
+		// Custom repository, ADempiere GitHub Organization by Default
+		url = findProperty("deployPublishUrl") ?: System.properties['deploy.publish_url'] ?:
+			projectEnv.get("GITHUB_DEPLOY_URL", null) ?: System.getenv("GITHUB_DEPLOY_URL") ?: "https://maven.pkg.github.com/adempiere/adempiere"
+		credentials {
+			// project property, system property, .env file, system enviroment variable
+			username = findProperty("deployUsername") ?: System.properties['deploy.user'] ?:
+				projectEnv.get("GITHUB_DEPLOY_USER", null) ?: System.getenv("GITHUB_DEPLOY_USER")
+			password = findProperty("deployPassword") ?: System.properties['deploy.token'] ?:
+				projectEnv.get("GITHUB_DEPLOY_TOKEN", null) ?: System.getenv("GITHUB_DEPLOY_TOKEN")
+		}
+	}
+	maven {
+		// GitHub ADempiere repository
+		url = "https://maven.pkg.github.com/adempiere/adempiere"
+		credentials {
+			// project property, system property, .env file, system enviroment variable
+			username = findProperty("deployUsername") ?: System.properties['deploy.user'] ?:
+				projectEnv.get("GITHUB_DEPLOY_USER", null) ?: System.getenv("GITHUB_DEPLOY_USER")
+			password = findProperty("deployPassword") ?: System.properties['deploy.token'] ?:
+				projectEnv.get("GITHUB_DEPLOY_TOKEN", null) ?: System.getenv("GITHUB_DEPLOY_TOKEN")
+		}
+	}
 }
 
 allprojects {
-    tasks.withType(Javadoc) {
-    	options.addStringOption('Xdoclint:none', '-quiet')
-   	}
+	tasks.withType(Javadoc) {
+		options.addStringOption('Xdoclint:none', '-quiet')
+	}
 }
 
 dependencies {
-   api fileTree(
-        dir: 'lib',
-        include: [
-            '*.jar'
-        ]
-    )
-    //	ADempiere Core
-    api "${baseGroupId}:base:${baseVersion}"
-    api "${baseGroupId}:project:${baseVersion}"
+	api fileTree(
+		dir: 'lib',
+		include: [
+			'*.jar'
+		]
+	)
+	//	ADempiere Core
+	api "${baseGroupId}:base:${baseVersion}"
+	api "${baseGroupId}:project:${baseVersion}"
 }
 
 sourceSets {
-    main {
-         java {
-            srcDirs = ['src/main/java']
-         }
-    }
+	main {
+			java {
+			srcDirs = ['src/main/java']
+		}
+	}
 }
 
 java {
-    withJavadocJar()
-    withSourcesJar()
+	withJavadocJar()
+	withSourcesJar()
 }
 
-signing {
-    sign configurations.archives
-}
 
 def entityType = 'D'
-version = System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
-def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP")
+// project property, system property, .env file, system enviroment variable
+version = findProperty("deployVersion") ?: System.properties['deploy.version'] ?:
+	projectEnv.get("ADEMPIERE_LIBRARY_VERSION", null) ?: System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
+// project property, system property, .env file, system enviroment variable
+def customGroupId = findProperty("deployGroup") ?: System.properties['deploy.group'] ?:
+	projectEnv.get("ADEMPIERE_LIBRARY_GROUP", null) ?: System.getenv("ADEMPIERE_LIBRARY_GROUP") ?: "io.github.adempiere"
 jar {
-    manifest {
-        attributes("Implementation-Title": "Adempiere Template Management",
-                   "Implementation-Version": version, 
-                   "EntityType": entityType)
-    }
+	manifest {
+		attributes(
+			"Implementation-Title": "Adempiere Point Of Sales Improvements",
+			"Implementation-Version": version,
+			"EntityType": entityType
+		)
+	}
 }
 
 publishing {
-    repositories {
-        maven {
-            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            credentials {
-                username = findProperty("sonatypeUsername")
-                password = findProperty("sonatypePassword")
-            }
-        }
-    }
-    publications {
-        mavenJava(MavenPublication) {
-        	groupId customGroupId
-            artifactId 'adempiere-pos-improvements'
-            version
-           	from components.java
-           	pom {
-                name = 'ADempiere POS Improvements'
-                description = 'A project to improve all definition of POS for ADempiere'
-                url = 'http://adempiere.io/'
-                licenses {
-                    license {
-                        name = 'GNU General Public License, version 2'
-                        url = 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id = 'yamelsenih'
-                        name = 'Yamel Senih'
-                        email = 'ysenih@erpya.com'
-                    }
-                }
-                scm {
-                    connection = 'scm:git:git://github.com/adempiere/adempiere-pos-improvements.git'
-                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-pos-improvements.git'
-                    url = 'http://github.com/adempiere/adempiere-pos-improvements'
-                }
-            }
+	repositories {
+		mavenLocal()
+		maven {
+			// Adempiere GitHub Organization by Default
+			url = findProperty("deployPublishUrl") ?: System.properties['deploy.publish_url'] ?:
+				projectEnv.get("GITHUB_DEPLOY_URL", null) ?: System.getenv("GITHUB_DEPLOY_URL") ?: "https://maven.pkg.github.com/adempiere/adempiere"
+			credentials {
+				// project property, system property, .env file, system enviroment variable
+				username = findProperty("deployUsername") ?: System.properties['deploy.user'] ?:
+					projectEnv.get("GITHUB_DEPLOY_USER", null) ?: System.getenv("GITHUB_DEPLOY_USER")
+				password = findProperty("deployPassword") ?: System.properties['deploy.token'] ?:
+					projectEnv.get("GITHUB_DEPLOY_TOKEN", null) ?: System.getenv("GITHUB_DEPLOY_TOKEN")
+			}
+		}
+	}
+	publications {
+		mavenJava(MavenPublication) {
+			groupId = customGroupId
+			artifactId = 'adempiere-pos-improvements'
+			version = version
+			from components.java
+			pom {
+				name = 'ADempiere POS Improvements'
+				description = 'A project to improve all definition of POS for ADempiere'
+				url = 'http://adempiere.io/'
+				licenses {
+					license {
+						name = 'GNU General Public License, version 2'
+						url = 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt'
+					}
+				}
+				developers {
+					developer {
+						id = 'yamelsenih'
+						name = 'Yamel Senih'
+						email = 'ysenih@erpya.com'
+					}
+					developer {
+						id = 'edwinbetanc0urt'
+						name = 'Edwin Betancourt'
+						email = 'EdwinBetanc0urt@outlook.com'
+					}
+				}
+				scm {
+					connection = 'scm:git:git://github.com/adempiere/adempiere-pos-improvements.git'
+					developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-pos-improvements.git'
+					url = 'http://github.com/adempiere/adempiere-pos-improvements'
+				}
+			}
 		}
 	}
 }
 
 
 signing {
-	def isReleaseVersion = !version.toString().startsWith("local") && !version.toString().endsWith("-SNAPSHOT")
+    sign publishing.publications.mavenJava
+}
 
-	sign configurations.archives
-
-	setRequired {
-		// signing is required if this is a release version and the artifacts are to be published
-		// do not use hasTask() as this require realization of the tasks that maybe are not necessary
-		(isReleaseVersion || version.toString().equals("build")) && gradle.taskGraph.allTasks.any {
-			it.equals(PublishToMavenRepository)
-		}
-	}
-	def signingKey = findProperty("deploySigningKey")
-	def signingPassword = findProperty("deploySigningPassword")
-	useInMemoryPgpKeys(signingKey, signingPassword)
-	sign publishing.publications.mavenJava
+signing {
+	def signingKey = findProperty("signingKey")
+    def signingPassword = findProperty("signingPassword")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.mavenJava
 }
