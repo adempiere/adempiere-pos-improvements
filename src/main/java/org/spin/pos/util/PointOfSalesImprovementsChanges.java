@@ -37,7 +37,6 @@ public class PointOfSalesImprovementsChanges {
 	/**
 	 * Change Order Line for tax exempt
 	 * @param orderLine
-	 * @return
 	 */
 	public static void changeTax(MOrderLine orderLine, boolean isSOTaxExempt) {
 		if(!orderLine.isProcessed()) {
@@ -108,4 +107,5 @@ public class PointOfSalesImprovementsChanges {
 								&& (tax.getSOPOType().equals(MTax.SOPOTYPE_Both) 
 										|| tax.getSOPOType().equals(MTax.SOPOTYPE_SalesTax))));
 	}
+
 }
