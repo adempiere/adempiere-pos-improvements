@@ -58,7 +58,7 @@ jobs:
         run: gradle publish
         env:
           ADEMPIERE_LIBRARY_VERSION: ${{ github.event.release.tag_name }}
-          ADEMPIERE_LIBRARY_GROUP: ${{ secrets.ADEMPIERE_LIBRARY_GROUP }}
+          # ADEMPIERE_LIBRARY_GROUP: ${{ secrets.ADEMPIERE_LIBRARY_GROUP }}
           ORG_GRADLE_PROJECT_deployPublishUrl: ${{ secrets.DEPLOY_PUBLISH_SONATYPE_URL }}
           ORG_GRADLE_PROJECT_deployUsername: ${{ secrets.OSSRH_USERNAME }}
           ORG_GRADLE_PROJECT_deployPassword: ${{ secrets.OSSRH_TOKEN }}
@@ -108,7 +108,7 @@ jobs:
         run: gradle publish
         env:
           ADEMPIERE_LIBRARY_VERSION: ${{ github.event.release.tag_name }}
-          ADEMPIERE_LIBRARY_GROUP: ${{ secrets.ADEMPIERE_LIBRARY_GROUP }}
+          # ADEMPIERE_LIBRARY_GROUP: ${{ secrets.ADEMPIERE_LIBRARY_GROUP }}
           ORG_GRADLE_PROJECT_deployPublishUrl: ${{ secrets.DEPLOY_PUBLISH_GITHUB_URL }}
           ORG_GRADLE_PROJECT_deployUsername: "${{ github.actor }}"
-          ORG_GRADLE_PROJECT_deployPassword: "${{ secrets.GITHUB_TOKEN }}"
+          ORG_GRADLE_PROJECT_deployPassword: "${{ secrets.DEPLOY_TOKEN }}"

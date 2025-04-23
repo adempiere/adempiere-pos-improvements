@@ -51,7 +51,6 @@ public class PaymentApprovalUtil {
 	/**
 	 * Set default verification from POS payment term
 	 * @param payment
-	 * @return void
 	 */
 	public static void setDefaultVerificationFromPointOfSales(MPayment payment) {
 		if(payment.isProcessed()
@@ -74,7 +73,6 @@ public class PaymentApprovalUtil {
 	/**
 	 * Set default verification from POS payment term
 	 * @param payment
-	 * @return void
 	 */
 	public static void sendPaymentVerificationNotification(MPayment payment) {
 		if(payment.isProcessed()
@@ -120,7 +118,6 @@ public class PaymentApprovalUtil {
 	/**
 	 * Validate that a order has approval from WF for all related payments
 	 * @param order
-	 * @return void
 	 */
 	public static void validateApprovalforPayment(MOrder order) {
 		MPayment.getOfOrder(order).forEach(payment -> validateApprovalForPayment(payment));
@@ -129,7 +126,6 @@ public class PaymentApprovalUtil {
 	/**
 	 * Validate that a payment has approval from WF
 	 * @param payment
-	 * @return void
 	 */
 	public static void validateApprovalForPayment(MPayment payment) {
 		if(payment.get_ValueAsBoolean(COLUMNNAME_IsPaymentVerificationRequired)
@@ -137,4 +133,5 @@ public class PaymentApprovalUtil {
 			throw new AdempiereException(Msg.parseTranslation(payment.getCtx(), "@" + MESSAGE_PaymentNotVerifyByOperator + "@"));
 		}
 	}
+
 }

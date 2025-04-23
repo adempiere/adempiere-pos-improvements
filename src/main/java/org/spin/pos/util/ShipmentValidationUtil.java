@@ -43,7 +43,6 @@ public class ShipmentValidationUtil {
 	/**
 	 * Validate shipment from Point of Sales
 	 * @param shipment
-	 * @return void
 	 */
 	public static void validateShipmentFromPOS(MInOut shipment) {
 		//	Only for POS
@@ -77,4 +76,5 @@ public class ShipmentValidationUtil {
 			throw new AdempiereException(Msg.parseTranslation(shipment.getCtx(), "@" + MESSAGE_MissingProductsOnShipment + "@") + errors.toString());
 		}
 	}
+
 }
