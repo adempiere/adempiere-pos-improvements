@@ -51,7 +51,8 @@ sourceSets {
 
 def entityType = 'ECA14'
 def version = System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
-def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP") ?: "io.github.adempiere"
+// def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP") ?: "io.github.adempiere"
+def group = "io.github.adempiere"
 
 jar {
     manifest {
@@ -83,7 +84,7 @@ publishing {
     }
     publications {
         mavenJava(MavenPublication) {
-        	groupId customGroupId
+			groupId group
             artifactId 'adempiere-pos-improvements'
 			version = version
            	from components.java
