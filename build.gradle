@@ -1,7 +1,17 @@
-apply plugin: 'java-library'
-apply plugin: 'maven-publish'
-apply plugin: 'signing'
-sourceCompatibility = 1.11
+plugins {
+	id "java-library"
+	id "signing"
+	id "maven-publish"
+	id "io.github.uoxx3.project-environment" version "1.0.1"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_11
+	// targetCompatibility = JavaVersion.VERSION_17
+	withJavadocJar()
+	withSourcesJar()
+}
+
 def baseVersion = '3.9.4'
 def baseGroupId = 'io.github.adempiere'
 
@@ -30,39 +40,44 @@ dependencies {
 
 sourceSets {
     main {
-         java {
-            srcDirs = ['src/main/java']
-         }
+		java {
+			srcDirs = [
+				"src/main/java"
+			]
+		}
     }
 }
 
-java {
-    withJavadocJar()
-    withSourcesJar()
-}
 
-signing {
-    sign configurations.archives
-}
+def entityType = 'ECA14'
+def version = System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
+def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP") ?: "io.github.adempiere"
 
-def entityType = 'D'
-version = System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
-def customGroupId = System.getenv("ADEMPIERE_LIBRARY_GROUP")
 jar {
     manifest {
-        attributes("Implementation-Title": "Adempiere Template Management",
-                   "Implementation-Version": version, 
-                   "EntityType": entityType)
+		attributes(
+			"Implementation-Title": "ADempiere POS Improvements",
+			"Implementation-Version": version,
+			"EntityType": entityType
+		)
     }
 }
 
 publishing {
     repositories {
+		mavenLocal()
+
         maven {
-            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+			// Adempiere GitHub Organization by Default
+			url = findProperty("deployPublishUrl") ?: System.properties['deploy.publish_url'] ?:
+				projectEnv.get("GITHUB_DEPLOY_URL", null) ?: System.getenv("GITHUB_DEPLOY_URL") ?:
+				"https://maven.pkg.github.com/adempiere/adempiere"
             credentials {
-                username = findProperty("sonatypeUsername")
-                password = findProperty("sonatypePassword")
+				// project property, system property, .env project file, system enviroment variable
+				username = findProperty("deployUsername") ?: System.properties['deploy.user'] ?:
+					projectEnv.get("GITHUB_DEPLOY_USER", null) ?: System.getenv("GITHUB_DEPLOY_USER")
+				password = findProperty("deployPassword") ?: System.properties['deploy.token'] ?:
+					projectEnv.get("GITHUB_DEPLOY_TOKEN", null) ?: System.getenv("GITHUB_DEPLOY_TOKEN")
             }
         }
     }
@@ -70,7 +85,7 @@ publishing {
         mavenJava(MavenPublication) {
         	groupId customGroupId
             artifactId 'adempiere-pos-improvements'
-            version
+			version = version
            	from components.java
            	pom {
                 name = 'ADempiere POS Improvements'
@@ -88,6 +103,11 @@ publishing {
                         name = 'Yamel Senih'
                         email = 'ysenih@erpya.com'
                     }
+					developer {
+						id = "edwinbetanc0urt"
+						name = "Edwin Betancourt"
+						email = "edwinbetanc0urt@outlook.com"
+					}
                 }
                 scm {
                     connection = 'scm:git:git://github.com/adempiere/adempiere-pos-improvements.git'
@@ -99,11 +119,24 @@ publishing {
 	}
 }
 
-signing {
-    sign publishing.publications.mavenJava
+
+task cleanBuildPublishLocal(type: GradleBuild) {
+	tasks = ['clean', 'build', 'publishToMavenLocal']
 }
 
+
 signing {
+	def isReleaseVersion = !version.toString().startsWith("local") && !version.toString().endsWith("-SNAPSHOT")
+
+	sign configurations.archives
+
+	setRequired {
+		// signing is required if this is a release version and the artifacts are to be published
+		// do not use hasTask() as this require realization of the tasks that maybe are not necessary
+		(isReleaseVersion || version.toString().equals("build")) && gradle.taskGraph.allTasks.any {
+			it.equals(PublishToMavenRepository)
+		}
+	}
 	def signingKey = findProperty("signingKey")
     def signingPassword = findProperty("signingPassword")
     useInMemoryPgpKeys(signingKey, signingPassword)
