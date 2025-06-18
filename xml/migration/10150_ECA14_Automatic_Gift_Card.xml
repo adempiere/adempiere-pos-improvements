@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Migrations>
   <Migration EntityType="ECA14" Name="ECA14 Automatic Gift Card" ReleaseNo="3.9.4" SeqNo="10150">
-    <Comments>ECA14 Generate Automatic Gift Card, checks to allow print. By EdwinBetanc0urt.</Comments>
+    <Comments>ECA14 Generate Automatic Gift Card, checks to print. By EdwinBetanc0urt.</Comments>
     <Step SeqNo="10" StepType="AD">
       <PO AD_Table_ID="276" Action="U" Record_ID="62588" Table="AD_Element">
         <Data AD_Column_ID="58588" Column="AD_Reference_ID" isOldNull="true">30</Data>
@@ -15,20 +15,20 @@
         <Data AD_Column_ID="2596" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="58588" Column="AD_Reference_ID">20</Data>
         <Data AD_Column_ID="58590" Column="AD_Reference_Value_ID" isNewNull="true"/>
-        <Data AD_Column_ID="2602" Column="ColumnName">IsAllowsPrintShipment</Data>
+        <Data AD_Column_ID="2602" Column="ColumnName">IsPrintShipment</Data>
         <Data AD_Column_ID="2598" Column="Created">2025-06-17 17:27:46.042</Data>
         <Data AD_Column_ID="2599" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="2604" Column="Description">Allows print shipment from POS</Data>
+        <Data AD_Column_ID="2604" Column="Description">Print shipment from POS</Data>
         <Data AD_Column_ID="6484" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="58589" Column="FieldLength">1</Data>
-        <Data AD_Column_ID="2605" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="2605" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="2597" Column="IsActive">true</Data>
-        <Data AD_Column_ID="2603" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="2603" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="6283" Column="PO_Description" isNewNull="true"/>
         <Data AD_Column_ID="6284" Column="PO_Help" isNewNull="true"/>
         <Data AD_Column_ID="6285" Column="PO_Name" isNewNull="true"/>
         <Data AD_Column_ID="6286" Column="PO_PrintName" isNewNull="true"/>
-        <Data AD_Column_ID="4299" Column="PrintName">Allows Print Shipment</Data>
+        <Data AD_Column_ID="4299" Column="PrintName">Print Shipment</Data>
         <Data AD_Column_ID="84316" Column="UUID">86c130b7-f061-42ea-8bf0-ad7baa6e8ae5</Data>
         <Data AD_Column_ID="2600" Column="Updated">2025-06-17 17:27:46.043</Data>
         <Data AD_Column_ID="2601" Column="UpdatedBy">100</Data>
@@ -42,16 +42,16 @@
         <Data AD_Column_ID="2640" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="2642" Column="Created">2025-06-17 17:27:50.273</Data>
         <Data AD_Column_ID="2643" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="2647" Column="Description">Permite imprimir entrega desde el Punto de Ventas</Data>
-        <Data AD_Column_ID="2648" Column="Help">Permite imprimir entregas desde la definición del Punto de Ventas</Data>
+        <Data AD_Column_ID="2647" Column="Description">Imprimir entrega desde el Punto de Ventas</Data>
+        <Data AD_Column_ID="2648" Column="Help">Imprimir entregas desde la definición del Punto de Ventas</Data>
         <Data AD_Column_ID="2641" Column="IsActive">true</Data>
         <Data AD_Column_ID="2649" Column="IsTranslated">true</Data>
-        <Data AD_Column_ID="2646" Column="Name">Permite Imprimir Entrega</Data>
+        <Data AD_Column_ID="2646" Column="Name">Imprimir Entrega</Data>
         <Data AD_Column_ID="6448" Column="PO_Description" isNewNull="true"/>
         <Data AD_Column_ID="6449" Column="PO_Help" isNewNull="true"/>
         <Data AD_Column_ID="6450" Column="PO_Name" isNewNull="true"/>
         <Data AD_Column_ID="6451" Column="PO_PrintName" isNewNull="true"/>
-        <Data AD_Column_ID="4300" Column="PrintName">Permite Imprimir Entrega</Data>
+        <Data AD_Column_ID="4300" Column="PrintName">Imprimir Entrega</Data>
         <Data AD_Column_ID="84317" Column="UUID">672a5c23-bcfe-4bb4-8f5e-20079b5aeb00</Data>
         <Data AD_Column_ID="2644" Column="Updated">2025-06-17 17:27:50.273</Data>
         <Data AD_Column_ID="2645" Column="UpdatedBy">100</Data>
@@ -64,20 +64,20 @@
         <Data AD_Column_ID="2596" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="58588" Column="AD_Reference_ID">20</Data>
         <Data AD_Column_ID="58590" Column="AD_Reference_Value_ID" isNewNull="true"/>
-        <Data AD_Column_ID="2602" Column="ColumnName">IsAllowsPrintCollet</Data>
+        <Data AD_Column_ID="2602" Column="ColumnName">IsPrintCollet</Data>
         <Data AD_Column_ID="2598" Column="Created">2025-06-17 17:31:46.562</Data>
         <Data AD_Column_ID="2599" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="2604" Column="Description">Allows print collet from POS</Data>
+        <Data AD_Column_ID="2604" Column="Description">Print collet from POS</Data>
         <Data AD_Column_ID="6484" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="58589" Column="FieldLength">1</Data>
-        <Data AD_Column_ID="2605" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="2605" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="2597" Column="IsActive">true</Data>
-        <Data AD_Column_ID="2603" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="2603" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="6283" Column="PO_Description" isNewNull="true"/>
         <Data AD_Column_ID="6284" Column="PO_Help" isNewNull="true"/>
         <Data AD_Column_ID="6285" Column="PO_Name" isNewNull="true"/>
         <Data AD_Column_ID="6286" Column="PO_PrintName" isNewNull="true"/>
-        <Data AD_Column_ID="4299" Column="PrintName">Allows Print Collet</Data>
+        <Data AD_Column_ID="4299" Column="PrintName">Print Collet</Data>
         <Data AD_Column_ID="84316" Column="UUID">8d86019a-eec9-4d7a-8af9-3114c3d10590</Data>
         <Data AD_Column_ID="2600" Column="Updated">2025-06-17 17:31:46.562</Data>
         <Data AD_Column_ID="2601" Column="UpdatedBy">100</Data>
@@ -91,16 +91,16 @@
         <Data AD_Column_ID="2640" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="2642" Column="Created">2025-06-17 17:31:47.127</Data>
         <Data AD_Column_ID="2643" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="2647" Column="Description">Permite imprimir cobro desde el Punto de Ventas</Data>
-        <Data AD_Column_ID="2648" Column="Help">Permite imprimir cobro desde la definición del Punto de Ventas</Data>
+        <Data AD_Column_ID="2647" Column="Description">Imprimir cobro desde el Punto de Ventas</Data>
+        <Data AD_Column_ID="2648" Column="Help">Imprimir cobro desde la definición del Punto de Ventas</Data>
         <Data AD_Column_ID="2641" Column="IsActive">true</Data>
         <Data AD_Column_ID="2649" Column="IsTranslated">true</Data>
-        <Data AD_Column_ID="2646" Column="Name">Permite Imprimir Cobro</Data>
+        <Data AD_Column_ID="2646" Column="Name">Imprimir Cobro</Data>
         <Data AD_Column_ID="6448" Column="PO_Description" isNewNull="true"/>
         <Data AD_Column_ID="6449" Column="PO_Help" isNewNull="true"/>
         <Data AD_Column_ID="6450" Column="PO_Name" isNewNull="true"/>
         <Data AD_Column_ID="6451" Column="PO_PrintName" isNewNull="true"/>
-        <Data AD_Column_ID="4300" Column="PrintName">Permite Imprimir Cobro</Data>
+        <Data AD_Column_ID="4300" Column="PrintName">Imprimir Cobro</Data>
         <Data AD_Column_ID="84317" Column="UUID">42557fdd-9b39-470f-abdd-7b1c87b23a30</Data>
         <Data AD_Column_ID="2644" Column="Updated">2025-06-17 17:31:47.127</Data>
         <Data AD_Column_ID="2645" Column="UpdatedBy">100</Data>
@@ -113,20 +113,20 @@
         <Data AD_Column_ID="2596" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="58588" Column="AD_Reference_ID">20</Data>
         <Data AD_Column_ID="58590" Column="AD_Reference_Value_ID" isNewNull="true"/>
-        <Data AD_Column_ID="2602" Column="ColumnName">IsAllowsPrintGiftCard</Data>
+        <Data AD_Column_ID="2602" Column="ColumnName">IsPrintGiftCard</Data>
         <Data AD_Column_ID="2598" Column="Created">2025-06-17 17:32:49.903</Data>
         <Data AD_Column_ID="2599" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="2604" Column="Description">Allows print gift card from POS</Data>
+        <Data AD_Column_ID="2604" Column="Description">Print gift card from POS</Data>
         <Data AD_Column_ID="6484" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="58589" Column="FieldLength">1</Data>
-        <Data AD_Column_ID="2605" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="2605" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="2597" Column="IsActive">true</Data>
-        <Data AD_Column_ID="2603" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="2603" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="6283" Column="PO_Description" isNewNull="true"/>
         <Data AD_Column_ID="6284" Column="PO_Help" isNewNull="true"/>
         <Data AD_Column_ID="6285" Column="PO_Name" isNewNull="true"/>
         <Data AD_Column_ID="6286" Column="PO_PrintName" isNewNull="true"/>
-        <Data AD_Column_ID="4299" Column="PrintName">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="4299" Column="PrintName">Print Gift Card</Data>
         <Data AD_Column_ID="84316" Column="UUID">7d98335b-8a8e-489b-af8e-2daf7f6ad779</Data>
         <Data AD_Column_ID="2600" Column="Updated">2025-06-17 17:32:49.903</Data>
         <Data AD_Column_ID="2601" Column="UpdatedBy">100</Data>
@@ -140,16 +140,16 @@
         <Data AD_Column_ID="2640" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="2642" Column="Created">2025-06-17 17:32:50.486</Data>
         <Data AD_Column_ID="2643" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="2647" Column="Description">Permite imprimir cobro desde el Punto de Ventas</Data>
-        <Data AD_Column_ID="2648" Column="Help">Permite imprimir cobro desde la definición del Punto de Ventas</Data>
+        <Data AD_Column_ID="2647" Column="Description">Imprimir cobro desde el Punto de Ventas</Data>
+        <Data AD_Column_ID="2648" Column="Help">Imprimir cobro desde la definición del Punto de Ventas</Data>
         <Data AD_Column_ID="2641" Column="IsActive">true</Data>
         <Data AD_Column_ID="2649" Column="IsTranslated">true</Data>
-        <Data AD_Column_ID="2646" Column="Name">Permite Imprimir Tarjeta Regalo</Data>
+        <Data AD_Column_ID="2646" Column="Name">Imprimir Tarjeta Regalo</Data>
         <Data AD_Column_ID="6448" Column="PO_Description" isNewNull="true"/>
         <Data AD_Column_ID="6449" Column="PO_Help" isNewNull="true"/>
         <Data AD_Column_ID="6450" Column="PO_Name" isNewNull="true"/>
         <Data AD_Column_ID="6451" Column="PO_PrintName" isNewNull="true"/>
-        <Data AD_Column_ID="4300" Column="PrintName">Permite Imprimir Tarjeta Regalo</Data>
+        <Data AD_Column_ID="4300" Column="PrintName">Imprimir Tarjeta Regalo</Data>
         <Data AD_Column_ID="84317" Column="UUID">b48b7c71-56cb-499c-911e-5103d166b6d8</Data>
         <Data AD_Column_ID="2644" Column="Updated">2025-06-17 17:32:50.486</Data>
         <Data AD_Column_ID="2645" Column="UpdatedBy">100</Data>
@@ -551,16 +551,16 @@
         <Data AD_Column_ID="114" Column="AD_Table_ID">748</Data>
         <Data AD_Column_ID="115" Column="AD_Val_Rule_ID" isNewNull="true"/>
         <Data AD_Column_ID="1692" Column="Callout" isNewNull="true"/>
-        <Data AD_Column_ID="116" Column="ColumnName">IsAllowsPrintShipment</Data>
+        <Data AD_Column_ID="116" Column="ColumnName">IsPrintShipment</Data>
         <Data AD_Column_ID="13448" Column="ColumnSQL" isNewNull="true"/>
         <Data AD_Column_ID="549" Column="Created">2025-06-17 17:57:02.022</Data>
         <Data AD_Column_ID="550" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="117" Column="DefaultValue">N</Data>
-        <Data AD_Column_ID="112" Column="Description">Allows print shipment from POS</Data>
+        <Data AD_Column_ID="112" Column="Description">Print shipment from POS</Data>
         <Data AD_Column_ID="6482" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="118" Column="FieldLength">1</Data>
         <Data AD_Column_ID="56352" Column="FormatPattern" isNewNull="true"/>
-        <Data AD_Column_ID="113" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="113" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="54358" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="548" Column="IsActive">true</Data>
         <Data AD_Column_ID="62199" Column="IsAllowCopy">true</Data>
@@ -578,7 +578,7 @@
         <Data AD_Column_ID="125" Column="IsTranslated">false</Data>
         <Data AD_Column_ID="3360" Column="IsUpdateable">true</Data>
         <Data AD_Column_ID="50218" Column="MandatoryLogic" isNewNull="true"/>
-        <Data AD_Column_ID="111" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="111" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="92542" Column="NameOldValue" isNewNull="true"/>
         <Data AD_Column_ID="6245" Column="ReadOnlyLogic" isNewNull="true"/>
         <Data AD_Column_ID="92541" Column="RequiresSync">true</Data>
@@ -602,7 +602,7 @@
         <Data AD_Column_ID="12956" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="12959" Column="IsActive">true</Data>
         <Data AD_Column_ID="12954" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="12957" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="12957" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="84310" Column="UUID">048bc4ec-2f26-4521-8e4f-f0a643163c40</Data>
         <Data AD_Column_ID="12952" Column="Updated">2025-06-17 17:57:02.599</Data>
         <Data AD_Column_ID="12958" Column="UpdatedBy">100</Data>
@@ -622,16 +622,16 @@
         <Data AD_Column_ID="114" Column="AD_Table_ID">748</Data>
         <Data AD_Column_ID="115" Column="AD_Val_Rule_ID" isNewNull="true"/>
         <Data AD_Column_ID="1692" Column="Callout" isNewNull="true"/>
-        <Data AD_Column_ID="116" Column="ColumnName">IsAllowsPrintCollet</Data>
+        <Data AD_Column_ID="116" Column="ColumnName">IsPrintCollet</Data>
         <Data AD_Column_ID="13448" Column="ColumnSQL" isNewNull="true"/>
         <Data AD_Column_ID="549" Column="Created">2025-06-17 17:58:27.202</Data>
         <Data AD_Column_ID="550" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="117" Column="DefaultValue">N</Data>
-        <Data AD_Column_ID="112" Column="Description">Allows print collet from POS</Data>
+        <Data AD_Column_ID="112" Column="Description">Print collet from POS</Data>
         <Data AD_Column_ID="6482" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="118" Column="FieldLength">1</Data>
         <Data AD_Column_ID="56352" Column="FormatPattern" isNewNull="true"/>
-        <Data AD_Column_ID="113" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="113" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="54358" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="548" Column="IsActive">true</Data>
         <Data AD_Column_ID="62199" Column="IsAllowCopy">true</Data>
@@ -649,7 +649,7 @@
         <Data AD_Column_ID="125" Column="IsTranslated">false</Data>
         <Data AD_Column_ID="3360" Column="IsUpdateable">true</Data>
         <Data AD_Column_ID="50218" Column="MandatoryLogic" isNewNull="true"/>
-        <Data AD_Column_ID="111" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="111" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="92542" Column="NameOldValue" isNewNull="true"/>
         <Data AD_Column_ID="6245" Column="ReadOnlyLogic" isNewNull="true"/>
         <Data AD_Column_ID="92541" Column="RequiresSync">true</Data>
@@ -673,7 +673,7 @@
         <Data AD_Column_ID="12956" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="12959" Column="IsActive">true</Data>
         <Data AD_Column_ID="12954" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="12957" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="12957" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="84310" Column="UUID">26c56836-4537-49a9-8f86-fe766613f31a</Data>
         <Data AD_Column_ID="12952" Column="Updated">2025-06-17 17:58:27.793</Data>
         <Data AD_Column_ID="12958" Column="UpdatedBy">100</Data>
@@ -693,16 +693,16 @@
         <Data AD_Column_ID="114" Column="AD_Table_ID">748</Data>
         <Data AD_Column_ID="115" Column="AD_Val_Rule_ID" isNewNull="true"/>
         <Data AD_Column_ID="1692" Column="Callout" isNewNull="true"/>
-        <Data AD_Column_ID="116" Column="ColumnName">IsAllowsPrintGiftCard</Data>
+        <Data AD_Column_ID="116" Column="ColumnName">IsPrintGiftCard</Data>
         <Data AD_Column_ID="13448" Column="ColumnSQL" isNewNull="true"/>
         <Data AD_Column_ID="549" Column="Created">2025-06-17 17:59:24.364</Data>
         <Data AD_Column_ID="550" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="117" Column="DefaultValue">N</Data>
-        <Data AD_Column_ID="112" Column="Description">Allows print gift card from POS</Data>
+        <Data AD_Column_ID="112" Column="Description">Print gift card from POS</Data>
         <Data AD_Column_ID="6482" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="118" Column="FieldLength">1</Data>
         <Data AD_Column_ID="56352" Column="FormatPattern" isNewNull="true"/>
-        <Data AD_Column_ID="113" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="113" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="54358" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="548" Column="IsActive">true</Data>
         <Data AD_Column_ID="62199" Column="IsAllowCopy">true</Data>
@@ -720,7 +720,7 @@
         <Data AD_Column_ID="125" Column="IsTranslated">false</Data>
         <Data AD_Column_ID="3360" Column="IsUpdateable">true</Data>
         <Data AD_Column_ID="50218" Column="MandatoryLogic" isNewNull="true"/>
-        <Data AD_Column_ID="111" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="111" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="92542" Column="NameOldValue" isNewNull="true"/>
         <Data AD_Column_ID="6245" Column="ReadOnlyLogic" isNewNull="true"/>
         <Data AD_Column_ID="92541" Column="RequiresSync">true</Data>
@@ -744,7 +744,7 @@
         <Data AD_Column_ID="12956" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="12959" Column="IsActive">true</Data>
         <Data AD_Column_ID="12954" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="12957" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="12957" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="84310" Column="UUID">e57047ce-e987-4474-93cd-a707b54fc52d</Data>
         <Data AD_Column_ID="12952" Column="Updated">2025-06-17 17:59:25.056</Data>
         <Data AD_Column_ID="12958" Column="UpdatedBy">100</Data>
@@ -764,16 +764,16 @@
         <Data AD_Column_ID="114" Column="AD_Table_ID">54872</Data>
         <Data AD_Column_ID="115" Column="AD_Val_Rule_ID" isNewNull="true"/>
         <Data AD_Column_ID="1692" Column="Callout" isNewNull="true"/>
-        <Data AD_Column_ID="116" Column="ColumnName">IsAllowsPrintShipment</Data>
+        <Data AD_Column_ID="116" Column="ColumnName">IsPrintShipment</Data>
         <Data AD_Column_ID="13448" Column="ColumnSQL" isNewNull="true"/>
         <Data AD_Column_ID="549" Column="Created">2025-06-17 18:00:27.934</Data>
         <Data AD_Column_ID="550" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="117" Column="DefaultValue">N</Data>
-        <Data AD_Column_ID="112" Column="Description">Allows print shipment from POS</Data>
+        <Data AD_Column_ID="112" Column="Description">Print shipment from POS</Data>
         <Data AD_Column_ID="6482" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="118" Column="FieldLength">1</Data>
         <Data AD_Column_ID="56352" Column="FormatPattern" isNewNull="true"/>
-        <Data AD_Column_ID="113" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="113" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="54358" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="548" Column="IsActive">true</Data>
         <Data AD_Column_ID="62199" Column="IsAllowCopy">true</Data>
@@ -791,7 +791,7 @@
         <Data AD_Column_ID="125" Column="IsTranslated">false</Data>
         <Data AD_Column_ID="3360" Column="IsUpdateable">true</Data>
         <Data AD_Column_ID="50218" Column="MandatoryLogic" isNewNull="true"/>
-        <Data AD_Column_ID="111" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="111" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="92542" Column="NameOldValue" isNewNull="true"/>
         <Data AD_Column_ID="6245" Column="ReadOnlyLogic" isNewNull="true"/>
         <Data AD_Column_ID="92541" Column="RequiresSync">true</Data>
@@ -815,7 +815,7 @@
         <Data AD_Column_ID="12956" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="12959" Column="IsActive">true</Data>
         <Data AD_Column_ID="12954" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="12957" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="12957" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="84310" Column="UUID">b0d60f32-548a-4b23-9c46-afa0a3519068</Data>
         <Data AD_Column_ID="12952" Column="Updated">2025-06-17 18:00:28.558</Data>
         <Data AD_Column_ID="12958" Column="UpdatedBy">100</Data>
@@ -835,16 +835,16 @@
         <Data AD_Column_ID="114" Column="AD_Table_ID">54872</Data>
         <Data AD_Column_ID="115" Column="AD_Val_Rule_ID" isNewNull="true"/>
         <Data AD_Column_ID="1692" Column="Callout" isNewNull="true"/>
-        <Data AD_Column_ID="116" Column="ColumnName">IsAllowsPrintCollet</Data>
+        <Data AD_Column_ID="116" Column="ColumnName">IsPrintCollet</Data>
         <Data AD_Column_ID="13448" Column="ColumnSQL" isNewNull="true"/>
         <Data AD_Column_ID="549" Column="Created">2025-06-17 18:00:46.706</Data>
         <Data AD_Column_ID="550" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="117" Column="DefaultValue">N</Data>
-        <Data AD_Column_ID="112" Column="Description">Allows print collet from POS</Data>
+        <Data AD_Column_ID="112" Column="Description">Print collet from POS</Data>
         <Data AD_Column_ID="6482" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="118" Column="FieldLength">1</Data>
         <Data AD_Column_ID="56352" Column="FormatPattern" isNewNull="true"/>
-        <Data AD_Column_ID="113" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="113" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="54358" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="548" Column="IsActive">true</Data>
         <Data AD_Column_ID="62199" Column="IsAllowCopy">true</Data>
@@ -862,7 +862,7 @@
         <Data AD_Column_ID="125" Column="IsTranslated">false</Data>
         <Data AD_Column_ID="3360" Column="IsUpdateable">true</Data>
         <Data AD_Column_ID="50218" Column="MandatoryLogic" isNewNull="true"/>
-        <Data AD_Column_ID="111" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="111" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="92542" Column="NameOldValue" isNewNull="true"/>
         <Data AD_Column_ID="6245" Column="ReadOnlyLogic" isNewNull="true"/>
         <Data AD_Column_ID="92541" Column="RequiresSync">true</Data>
@@ -886,7 +886,7 @@
         <Data AD_Column_ID="12956" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="12959" Column="IsActive">true</Data>
         <Data AD_Column_ID="12954" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="12957" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="12957" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="84310" Column="UUID">4792b1fd-df06-4053-a21f-0b15429bd568</Data>
         <Data AD_Column_ID="12952" Column="Updated">2025-06-17 18:00:47.403</Data>
         <Data AD_Column_ID="12958" Column="UpdatedBy">100</Data>
@@ -906,16 +906,16 @@
         <Data AD_Column_ID="114" Column="AD_Table_ID">54872</Data>
         <Data AD_Column_ID="115" Column="AD_Val_Rule_ID" isNewNull="true"/>
         <Data AD_Column_ID="1692" Column="Callout" isNewNull="true"/>
-        <Data AD_Column_ID="116" Column="ColumnName">IsAllowsPrintGiftCard</Data>
+        <Data AD_Column_ID="116" Column="ColumnName">IsPrintGiftCard</Data>
         <Data AD_Column_ID="13448" Column="ColumnSQL" isNewNull="true"/>
         <Data AD_Column_ID="549" Column="Created">2025-06-17 18:01:05.527</Data>
         <Data AD_Column_ID="550" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="117" Column="DefaultValue">N</Data>
-        <Data AD_Column_ID="112" Column="Description">Allows print gift card from POS</Data>
+        <Data AD_Column_ID="112" Column="Description">Print gift card from POS</Data>
         <Data AD_Column_ID="6482" Column="EntityType">ECA14</Data>
         <Data AD_Column_ID="118" Column="FieldLength">1</Data>
         <Data AD_Column_ID="56352" Column="FormatPattern" isNewNull="true"/>
-        <Data AD_Column_ID="113" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="113" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="54358" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="548" Column="IsActive">true</Data>
         <Data AD_Column_ID="62199" Column="IsAllowCopy">true</Data>
@@ -933,7 +933,7 @@
         <Data AD_Column_ID="125" Column="IsTranslated">false</Data>
         <Data AD_Column_ID="3360" Column="IsUpdateable">true</Data>
         <Data AD_Column_ID="50218" Column="MandatoryLogic" isNewNull="true"/>
-        <Data AD_Column_ID="111" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="111" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="92542" Column="NameOldValue" isNewNull="true"/>
         <Data AD_Column_ID="6245" Column="ReadOnlyLogic" isNewNull="true"/>
         <Data AD_Column_ID="92541" Column="RequiresSync">true</Data>
@@ -957,7 +957,7 @@
         <Data AD_Column_ID="12956" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="12959" Column="IsActive">true</Data>
         <Data AD_Column_ID="12954" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="12957" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="12957" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="84310" Column="UUID">e3fc4ff2-1a89-4508-b548-2fe70ce6c6c4</Data>
         <Data AD_Column_ID="12952" Column="Updated">2025-06-17 18:01:06.122</Data>
         <Data AD_Column_ID="12958" Column="UpdatedBy">100</Data>
@@ -1447,11 +1447,11 @@
         <Data AD_Column_ID="579" Column="Created">2025-06-17 18:29:39.517</Data>
         <Data AD_Column_ID="580" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="53265" Column="DefaultValue" isNewNull="true"/>
-        <Data AD_Column_ID="169" Column="Description">Allows print gift card from POS</Data>
+        <Data AD_Column_ID="169" Column="Description">Print gift card from POS</Data>
         <Data AD_Column_ID="180" Column="DisplayLength">0</Data>
         <Data AD_Column_ID="177" Column="DisplayLogic">@IsAllowsGiftCard@='Y'</Data>
         <Data AD_Column_ID="7714" Column="EntityType">ECA14</Data>
-        <Data AD_Column_ID="170" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="170" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="57957" Column="Included_Tab_ID" isNewNull="true"/>
         <Data AD_Column_ID="54359" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="578" Column="IsActive">true</Data>
@@ -1467,7 +1467,7 @@
         <Data AD_Column_ID="78493" Column="IsQuickEntry">false</Data>
         <Data AD_Column_ID="2007" Column="IsReadOnly">false</Data>
         <Data AD_Column_ID="183" Column="IsSameLine">false</Data>
-        <Data AD_Column_ID="168" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="168" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="9969" Column="ObscureType" isNewNull="true"/>
         <Data AD_Column_ID="59704" Column="PreferredWidth">0</Data>
         <Data AD_Column_ID="181" Column="SeqNo">750</Data>
@@ -1486,11 +1486,11 @@
         <Data AD_Column_ID="1205" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="672" Column="Created">2025-06-17 18:29:40.314</Data>
         <Data AD_Column_ID="673" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="287" Column="Description">Allows print gift card from POS</Data>
-        <Data AD_Column_ID="288" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="287" Column="Description">Print gift card from POS</Data>
+        <Data AD_Column_ID="288" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="671" Column="IsActive">true</Data>
         <Data AD_Column_ID="289" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="286" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="286" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="84323" Column="UUID">ca1eeaa6-5e66-4943-828c-0feaa86824bd</Data>
         <Data AD_Column_ID="674" Column="Updated">2025-06-17 18:29:40.314</Data>
         <Data AD_Column_ID="675" Column="UpdatedBy">100</Data>
@@ -1513,11 +1513,11 @@
         <Data AD_Column_ID="579" Column="Created">2025-06-17 18:35:16.636</Data>
         <Data AD_Column_ID="580" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="53265" Column="DefaultValue" isNewNull="true"/>
-        <Data AD_Column_ID="169" Column="Description">Allows print shipment from POS</Data>
+        <Data AD_Column_ID="169" Column="Description">Print shipment from POS</Data>
         <Data AD_Column_ID="180" Column="DisplayLength">0</Data>
         <Data AD_Column_ID="177" Column="DisplayLogic" isNewNull="true"/>
         <Data AD_Column_ID="7714" Column="EntityType">ECA14</Data>
-        <Data AD_Column_ID="170" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="170" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="57957" Column="Included_Tab_ID" isNewNull="true"/>
         <Data AD_Column_ID="54359" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="578" Column="IsActive">true</Data>
@@ -1533,7 +1533,7 @@
         <Data AD_Column_ID="78493" Column="IsQuickEntry">false</Data>
         <Data AD_Column_ID="2007" Column="IsReadOnly">false</Data>
         <Data AD_Column_ID="183" Column="IsSameLine">false</Data>
-        <Data AD_Column_ID="168" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="168" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="9969" Column="ObscureType" isNewNull="true"/>
         <Data AD_Column_ID="59704" Column="PreferredWidth">0</Data>
         <Data AD_Column_ID="181" Column="SeqNo">760</Data>
@@ -1552,11 +1552,11 @@
         <Data AD_Column_ID="1205" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="672" Column="Created">2025-06-17 18:35:17.218</Data>
         <Data AD_Column_ID="673" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="287" Column="Description">Allows print shipment from POS</Data>
-        <Data AD_Column_ID="288" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="287" Column="Description">Print shipment from POS</Data>
+        <Data AD_Column_ID="288" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="671" Column="IsActive">true</Data>
         <Data AD_Column_ID="289" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="286" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="286" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="84323" Column="UUID">630d5b82-fec8-45ef-a7c5-10750149c3f6</Data>
         <Data AD_Column_ID="674" Column="Updated">2025-06-17 18:35:17.218</Data>
         <Data AD_Column_ID="675" Column="UpdatedBy">100</Data>
@@ -1579,11 +1579,11 @@
         <Data AD_Column_ID="579" Column="Created">2025-06-17 18:35:31.609</Data>
         <Data AD_Column_ID="580" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="53265" Column="DefaultValue" isNewNull="true"/>
-        <Data AD_Column_ID="169" Column="Description">Allows print collet from POS</Data>
+        <Data AD_Column_ID="169" Column="Description">Print collet from POS</Data>
         <Data AD_Column_ID="180" Column="DisplayLength">0</Data>
         <Data AD_Column_ID="177" Column="DisplayLogic" isNewNull="true"/>
         <Data AD_Column_ID="7714" Column="EntityType">ECA14</Data>
-        <Data AD_Column_ID="170" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="170" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="57957" Column="Included_Tab_ID" isNewNull="true"/>
         <Data AD_Column_ID="54359" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="578" Column="IsActive">true</Data>
@@ -1599,7 +1599,7 @@
         <Data AD_Column_ID="78493" Column="IsQuickEntry">false</Data>
         <Data AD_Column_ID="2007" Column="IsReadOnly">false</Data>
         <Data AD_Column_ID="183" Column="IsSameLine">true</Data>
-        <Data AD_Column_ID="168" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="168" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="9969" Column="ObscureType" isNewNull="true"/>
         <Data AD_Column_ID="59704" Column="PreferredWidth">0</Data>
         <Data AD_Column_ID="181" Column="SeqNo">770</Data>
@@ -1618,11 +1618,11 @@
         <Data AD_Column_ID="1205" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="672" Column="Created">2025-06-17 18:35:32.27</Data>
         <Data AD_Column_ID="673" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="287" Column="Description">Allows print collet from POS</Data>
-        <Data AD_Column_ID="288" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="287" Column="Description">Print collet from POS</Data>
+        <Data AD_Column_ID="288" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="671" Column="IsActive">true</Data>
         <Data AD_Column_ID="289" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="286" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="286" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="84323" Column="UUID">43bec208-6781-42a2-987b-2761634de269</Data>
         <Data AD_Column_ID="674" Column="Updated">2025-06-17 18:35:32.27</Data>
         <Data AD_Column_ID="675" Column="UpdatedBy">100</Data>
@@ -1645,11 +1645,11 @@
         <Data AD_Column_ID="579" Column="Created">2025-06-17 19:49:42.639</Data>
         <Data AD_Column_ID="580" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="53265" Column="DefaultValue" isNewNull="true"/>
-        <Data AD_Column_ID="169" Column="Description">Allows print gift card from POS</Data>
+        <Data AD_Column_ID="169" Column="Description">Print gift card from POS</Data>
         <Data AD_Column_ID="180" Column="DisplayLength">0</Data>
         <Data AD_Column_ID="177" Column="DisplayLogic">@IsAllowsGiftCard@='Y'</Data>
         <Data AD_Column_ID="7714" Column="EntityType">ECA14</Data>
-        <Data AD_Column_ID="170" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="170" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="57957" Column="Included_Tab_ID" isNewNull="true"/>
         <Data AD_Column_ID="54359" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="578" Column="IsActive">true</Data>
@@ -1665,7 +1665,7 @@
         <Data AD_Column_ID="78493" Column="IsQuickEntry">false</Data>
         <Data AD_Column_ID="2007" Column="IsReadOnly">false</Data>
         <Data AD_Column_ID="183" Column="IsSameLine">true</Data>
-        <Data AD_Column_ID="168" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="168" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="9969" Column="ObscureType" isNewNull="true"/>
         <Data AD_Column_ID="59704" Column="PreferredWidth">0</Data>
         <Data AD_Column_ID="181" Column="SeqNo">380</Data>
@@ -1684,11 +1684,11 @@
         <Data AD_Column_ID="1205" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="672" Column="Created">2025-06-17 19:49:44.009</Data>
         <Data AD_Column_ID="673" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="287" Column="Description">Allows print gift card from POS</Data>
-        <Data AD_Column_ID="288" Column="Help">Allows create a print gift card based on POS definition</Data>
+        <Data AD_Column_ID="287" Column="Description">Print gift card from POS</Data>
+        <Data AD_Column_ID="288" Column="Help">Create a print gift card based on POS definition</Data>
         <Data AD_Column_ID="671" Column="IsActive">true</Data>
         <Data AD_Column_ID="289" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="286" Column="Name">Allows Print Gift Card</Data>
+        <Data AD_Column_ID="286" Column="Name">Print Gift Card</Data>
         <Data AD_Column_ID="84323" Column="UUID">8fe201a0-3a20-4b76-854d-2e2e34abdd0e</Data>
         <Data AD_Column_ID="674" Column="Updated">2025-06-17 19:49:44.009</Data>
         <Data AD_Column_ID="675" Column="UpdatedBy">100</Data>
@@ -1711,11 +1711,11 @@
         <Data AD_Column_ID="579" Column="Created">2025-06-17 19:50:10.007</Data>
         <Data AD_Column_ID="580" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="53265" Column="DefaultValue" isNewNull="true"/>
-        <Data AD_Column_ID="169" Column="Description">Allows print shipment from POS</Data>
+        <Data AD_Column_ID="169" Column="Description">Print shipment from POS</Data>
         <Data AD_Column_ID="180" Column="DisplayLength">0</Data>
         <Data AD_Column_ID="177" Column="DisplayLogic" isNewNull="true"/>
         <Data AD_Column_ID="7714" Column="EntityType">ECA14</Data>
-        <Data AD_Column_ID="170" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="170" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="57957" Column="Included_Tab_ID" isNewNull="true"/>
         <Data AD_Column_ID="54359" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="578" Column="IsActive">true</Data>
@@ -1731,7 +1731,7 @@
         <Data AD_Column_ID="78493" Column="IsQuickEntry">false</Data>
         <Data AD_Column_ID="2007" Column="IsReadOnly">false</Data>
         <Data AD_Column_ID="183" Column="IsSameLine">false</Data>
-        <Data AD_Column_ID="168" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="168" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="9969" Column="ObscureType" isNewNull="true"/>
         <Data AD_Column_ID="59704" Column="PreferredWidth">0</Data>
         <Data AD_Column_ID="181" Column="SeqNo">390</Data>
@@ -1750,11 +1750,11 @@
         <Data AD_Column_ID="1205" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="672" Column="Created">2025-06-17 19:50:10.673</Data>
         <Data AD_Column_ID="673" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="287" Column="Description">Allows print shipment from POS</Data>
-        <Data AD_Column_ID="288" Column="Help">Allows create a print shipment based on POS definition</Data>
+        <Data AD_Column_ID="287" Column="Description">Print shipment from POS</Data>
+        <Data AD_Column_ID="288" Column="Help">Create a print shipment based on POS definition</Data>
         <Data AD_Column_ID="671" Column="IsActive">true</Data>
         <Data AD_Column_ID="289" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="286" Column="Name">Allows Print Shipment</Data>
+        <Data AD_Column_ID="286" Column="Name">Print Shipment</Data>
         <Data AD_Column_ID="84323" Column="UUID">7708df48-07cf-4b26-a6aa-7e9abe83d4c7</Data>
         <Data AD_Column_ID="674" Column="Updated">2025-06-17 19:50:10.673</Data>
         <Data AD_Column_ID="675" Column="UpdatedBy">100</Data>
@@ -1777,11 +1777,11 @@
         <Data AD_Column_ID="579" Column="Created">2025-06-17 19:50:40.085</Data>
         <Data AD_Column_ID="580" Column="CreatedBy">100</Data>
         <Data AD_Column_ID="53265" Column="DefaultValue" isNewNull="true"/>
-        <Data AD_Column_ID="169" Column="Description">Allows print collet from POS</Data>
+        <Data AD_Column_ID="169" Column="Description">Print collet from POS</Data>
         <Data AD_Column_ID="180" Column="DisplayLength">0</Data>
         <Data AD_Column_ID="177" Column="DisplayLogic" isNewNull="true"/>
         <Data AD_Column_ID="7714" Column="EntityType">ECA14</Data>
-        <Data AD_Column_ID="170" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="170" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="57957" Column="Included_Tab_ID" isNewNull="true"/>
         <Data AD_Column_ID="54359" Column="InfoFactoryClass" isNewNull="true"/>
         <Data AD_Column_ID="578" Column="IsActive">true</Data>
@@ -1797,7 +1797,7 @@
         <Data AD_Column_ID="78493" Column="IsQuickEntry">false</Data>
         <Data AD_Column_ID="2007" Column="IsReadOnly">false</Data>
         <Data AD_Column_ID="183" Column="IsSameLine">true</Data>
-        <Data AD_Column_ID="168" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="168" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="9969" Column="ObscureType" isNewNull="true"/>
         <Data AD_Column_ID="59704" Column="PreferredWidth">0</Data>
         <Data AD_Column_ID="181" Column="SeqNo">400</Data>
@@ -1816,11 +1816,11 @@
         <Data AD_Column_ID="1205" Column="AD_Org_ID">0</Data>
         <Data AD_Column_ID="672" Column="Created">2025-06-17 19:50:40.76</Data>
         <Data AD_Column_ID="673" Column="CreatedBy">100</Data>
-        <Data AD_Column_ID="287" Column="Description">Allows print collet from POS</Data>
-        <Data AD_Column_ID="288" Column="Help">Allows create a print collet based on POS definition</Data>
+        <Data AD_Column_ID="287" Column="Description">Print collet from POS</Data>
+        <Data AD_Column_ID="288" Column="Help">Create a print collet based on POS definition</Data>
         <Data AD_Column_ID="671" Column="IsActive">true</Data>
         <Data AD_Column_ID="289" Column="IsTranslated">false</Data>
-        <Data AD_Column_ID="286" Column="Name">Allows Print Collet</Data>
+        <Data AD_Column_ID="286" Column="Name">Print Collet</Data>
         <Data AD_Column_ID="84323" Column="UUID">16713c13-04bd-46f7-b1c4-a0944a69fec1</Data>
         <Data AD_Column_ID="674" Column="Updated">2025-06-17 19:50:40.76</Data>
         <Data AD_Column_ID="675" Column="UpdatedBy">100</Data>
