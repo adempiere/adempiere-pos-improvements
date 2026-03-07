@@ -2,11 +2,10 @@
 # This file was contributed by Carlos Parada and Yamel Senih from ERP Consultores y Asociados, C.A
 # This file was contributed by EdwinBetanc0urt@outlook.com https://github.com/EdwinBetanc0urt
 
-name: Publish With gradle to maven central
+name: Publish With gradle to GitHub Packages
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the develop branch
   release:
     types:
       - published
@@ -54,6 +53,11 @@ jobs:
           java-version: 11
           architecture: x64
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: current
+
       - name: Publish to Sonatype with Gradle
         run: gradle publish
         env:
@@ -65,33 +69,11 @@ jobs:
           ORG_GRADLE_PROJECT_signingKey: ${{ secrets.PGP_SECRET }}
           ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.PGP_PASSPHRASE }}
 
-
-  # # Check secrets to publish github registry
-  check-github-secrets:
-    name: Check if the github information was set on secrets and variables
-    runs-on: ubuntu-latest
-    outputs:
-      is_have_secrets: ${{ steps.check_github_secrets_job.outputs.is_have_secrets }}
-    steps:
-      - id: check_github_secrets_job
-        run: |
-          if [[ "${{ secrets.DEPLOY_PUBLISH_GITHUB_URL }}" != "" && \
-                "${{ secrets.DEPLOY_TOKEN }}" != "" ]]; \
-          then
-            echo "Secrets to use a container registry are configured in the repo"
-            echo "is_have_secrets=true" >> $GITHUB_OUTPUT
-          else
-            echo "Secrets to use a container registry were not configured in the repo"
-            echo "is_have_secrets=false" >> $GITHUB_OUTPUT
-          fi
-
   publish-github:
-    name: Publish Project (Github)
-    needs:
-      - check-github-secrets
-    # # Skip step based on secret
-    if: needs.check-github-secrets.outputs.is_have_secrets == 'true'
+    name: Publish Project (GitHub Packages)
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
@@ -104,11 +86,15 @@ jobs:
           java-version: 11
           architecture: x64
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: current
+
       - name: Publish to GitHub Packages with Gradle
         run: gradle publish
         env:
           ADEMPIERE_LIBRARY_VERSION: ${{ github.event.release.tag_name }}
-          ADEMPIERE_LIBRARY_GROUP: ${{ secrets.ADEMPIERE_LIBRARY_GROUP }}
-          ORG_GRADLE_PROJECT_deployPublishUrl: ${{ secrets.DEPLOY_PUBLISH_GITHUB_URL }}
+          ORG_GRADLE_PROJECT_deployPublishUrl: "https://maven.pkg.github.com/${{ github.repository }}"
           ORG_GRADLE_PROJECT_deployUsername: "${{ github.actor }}"
           ORG_GRADLE_PROJECT_deployPassword: "${{ secrets.GITHUB_TOKEN }}"

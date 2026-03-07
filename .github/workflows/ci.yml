@@ -46,6 +46,11 @@ jobs:
           java-version: 11
           architecture: x64
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: current
+
       - name: Build with Gradle
         run: gradle build
         env:
