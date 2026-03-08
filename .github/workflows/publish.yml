@@ -92,7 +92,7 @@ jobs:
           gradle-version: current
 
       - name: Publish to GitHub Packages with Gradle
-        run: gradle publish
+        run: gradle publish -x signMavenJavaPublication
         env:
           ADEMPIERE_LIBRARY_VERSION: ${{ github.event.release.tag_name }}
           ORG_GRADLE_PROJECT_deployPublishUrl: "https://maven.pkg.github.com/${{ github.repository }}"
