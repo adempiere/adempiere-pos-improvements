@@ -12,63 +12,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # Check secrets to publish sonatype registry
-  check-sonatype-secrets:
-    name: Check if the sonatype information was set on secrets and variables
-    runs-on: ubuntu-latest
-    outputs:
-      is_have_secrets: ${{ steps.check_sonatype_secrets_job.outputs.is_have_secrets }}
-    steps:
-      - id: check_sonatype_secrets_job
-        run: |
-          if [[ "${{ secrets.DEPLOY_PUBLISH_SONATYPE_URL }}" != "" && \
-                "${{ secrets.PGP_SECRET }}" != "" && \
-                "${{ secrets.PGP_PASSPHRASE }}" != "" && \
-                "${{ secrets.OSSRH_TOKEN }}" != "" && \
-                "${{ secrets.OSSRH_USERNAME }}" != "" ]]; \
-          then
-            echo "Secrets to use a container registry are configured in the repo"
-            echo "is_have_secrets=true" >> $GITHUB_OUTPUT
-          else
-            echo "Secrets to use a container registry were not configured in the repo"
-            echo "is_have_secrets=false" >> $GITHUB_OUTPUT
-          fi
-
-  publish-sonatype:
-    name: Publish Project (Sonatype)
-    needs:
-      - check-sonatype-secrets
-    # Skip step based on secret
-    if: needs.check-sonatype-secrets.outputs.is_have_secrets == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v4
-
-      - name: Set up Java JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-package: 'jdk'
-          java-version: 17
-          architecture: x64
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: current
-
-      - name: Publish to Sonatype with Gradle
-        run: gradle publish
-        env:
-          ADEMPIERE_LIBRARY_VERSION: ${{ github.event.release.tag_name }}
-          ADEMPIERE_LIBRARY_GROUP: ${{ secrets.ADEMPIERE_LIBRARY_GROUP }}
-          ORG_GRADLE_PROJECT_deployPublishUrl: ${{ secrets.DEPLOY_PUBLISH_SONATYPE_URL }}
-          ORG_GRADLE_PROJECT_deployUsername: ${{ secrets.OSSRH_USERNAME }}
-          ORG_GRADLE_PROJECT_deployPassword: ${{ secrets.OSSRH_TOKEN }}
-          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.PGP_SECRET }}
-          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.PGP_PASSPHRASE }}
-
   publish-github:
     name: Publish Project (GitHub Packages)
     runs-on: ubuntu-latest
