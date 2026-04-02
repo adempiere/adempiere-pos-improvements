@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Migrations>
-  <Migration EntityType="ECA14" Name="ECA14 Gift Card Report" ReleaseNo="3.9.4" SeqNo="10390">
+  <Migration EntityType="ECA14" Name="ECA14 Gift Card Report" ReleaseNo="3.9.4" SeqNo="10090">
     <Comments>ECA14 Gift Card/Voucher/Coupon Report. By EdwinBetanc0urt.</Comments>
     <Step SeqNo="10" StepType="AD">
       <PO AD_Table_ID="284" Action="I" Record_ID="54801" Table="AD_Process">
